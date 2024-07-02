@@ -1,0 +1,60 @@
+<style>
+body{
+  background-color:#EEEEEE;
+}
+
+.card {
+  width: 260px;
+  height:280px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top:50px;
+}
+.chat-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.chat-input {
+
+  border-top: 1px solid #ccc;
+  font-size:13px;
+  padding:10px;
+  align-content: center;
+}
+.send-button {
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  position:absolute;
+  bottom:220px;
+ left:450px;
+  cursor: pointer;
+}
+
+</style>
+<div class="card">
+  <div class="chat-header">View Student Details</div>
+ <div class="chat-input">
+  {{#if msg}}
+  <div class="alert">{{msg}}</div>
+  {{/if}}
+  {{#each rows}}
+    <p style="margin-left:10px;position:absolute"><strong>Name:</strong> {{this.NAME}}</p>
+    <p style="margin-left:10px;position:absolute;padding-top:30px;"><strong>ID:</strong> {{this.ID}}</p>
+    <p style="margin-left:10px;position:absolute;padding-top:60px;"><strong>GENDER:</strong> {{this.GENDER}}</p>
+    <p style="margin-left:10px;position:absolute;padding-top:90px;"><strong>DEPARTMENT:</strong> {{this.DEPARTMENT}}</p>
+    <p style="margin-left:10px;position:absolute;padding-top:120px;"><strong>NATIONALITY:</strong>{{this.NATIONALITY}}</p>
+    </div>
+    <a  class="send-button" href="/">Back</a>
+</div>
+</div>
+  {{/each}}

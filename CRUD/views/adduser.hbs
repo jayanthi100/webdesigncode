@@ -1,0 +1,202 @@
+
+<style>
+/*.card {
+    width: 250px;
+    height: 280px;
+    border-radius: 20px;
+     background:#E8C5E5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    top:20px;
+   }
+
+.vie {
+    margin-left:50px;
+   }
+
+label {
+  font-weight: bold; 
+}*/
+
+
+.card1 {
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 10px;
+}
+.card1-header {
+  background-color: #333;
+  padding: 16px;
+  text-align: center;
+}
+.card1-header .text-header {
+  margin: 0;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+body{
+  background-color:#EEEEEE;
+}
+
+
+   .form-group {
+  margin-bottom: 10px;
+  margin-left:10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1px;
+ 
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 250px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.form-group2 label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+.form-group2 input[type="text"],
+.form-group2 input[type="email"],
+.form-group2 input[type="password"] {
+  width: 250px;
+  padding: 2px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-group2 {
+  margin-bottom: 10px;
+  margin-left:12px;
+  font-size:14px;
+  padding:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.form-control1{
+    width: 250px;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.vie {
+  padding: 10px 20px;
+  margin-left: 13px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer
+}
+
+.btn:hover {
+  background-color: #ccc;
+  color: #333;
+}
+#gender{
+  font-size:14px;
+   width: 250px;
+   top:135px;
+}
+
+#department{
+  font-size:14px;
+  width:250px;
+  
+}
+#nationality{
+  padding:8px;
+}
+
+</style>
+
+<div class="card1">
+<div class="card1-header">
+<h3 class="text-header">Add New Student</h3>
+</div>
+
+
+{{#if msg}}
+<div class="alert">{{msg}}</div>
+{{/if}}
+<div class="card1-body">
+ <form method="post" action="/adduser">
+<div class="form-group">
+    <label for="name">NAME</label>
+    <input type="text" name="name" class="form-control1" >
+</div>
+
+
+
+<div class="form-group2">
+    <label for="gender" id="gender">GENDER</label>
+    <select id="gender" name="gender" class="form-control1">
+  <option value="" class="form-control1">Select gender</option>
+  <option value="male" class="form-control1">Male</option>
+  <option value="female" class="form-control1">Female</option>
+</select>
+</div>
+
+<div class="form-group2">
+<label for="department" id="department">DEPARTMENT</label>
+<select  name="department" id="department" class="form-control1"required>
+  <option value="" class="form-control1">Select Department</option>
+  <option value="ECE" class="form-control1">ECE</option>
+  <option value="EEE" class="form-control1">EEE</option>
+  <option value="BME"class="form-control1">BME</option>
+  <option value="CSE"class="form-control1">CSE</option>
+  <option value="MDE"class="form-control1">MDE</option>
+  <option value="IT"class="form-control1">IT</option>
+</select>
+</div>
+
+
+<div class="form-group">
+    <label for="nationality">NATIONALITY</label>
+    <input type="text" name="nationality" id="nationality" class="form-control1">
+</div>
+
+<div class="form-group">
+    <button type="submit" class="vie">Add</button>
+    <a  class="vie" href="/">View All</a>
+</div>
+</div>
+</div>
+</form>
+
+
